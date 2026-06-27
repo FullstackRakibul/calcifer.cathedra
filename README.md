@@ -173,3 +173,12 @@ is unchanged — file logging only governs the `ILogWriter` abstraction.
    `InitializeAsync`/`StartAsync`).
 3. Point the host at its assembly: `builder.AddCathedra(o => o.AddModuleAssemblyContaining<YourModule>());`
    — discovery and lifecycle are automatic.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for the vulnerability reporting process and security-relevant design
+notes (Production error handling, correlation IDs, file logging, and the no-auth default).
+
+## License
+
+Licensed under the [MIT License](LICENSE) © 2026 Rakibul Hasan.
