@@ -1,0 +1,116 @@
+## ---------------------------------------------------------------------------
+## Calcifer.Cathedra — .NET / Visual Studio .gitignore
+## ---------------------------------------------------------------------------
+
+## Build output
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Dd]ebug/
+[Rr]elease/
+[Dd]ebugPublic/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+build/
+bld/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+## Runtime logs (the Cathedra file logger writes here by default)
+logs/
+*.log
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## .NET / build tooling
+*.binlog
+.dotnet/
+.tool-versions
+
+## Test / coverage results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+TestResults/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.vsp
+*.vspx
+*.sap
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+
+## Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+*.DotSettings.user
+
+## ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+## ASP.NET / EF
+**/wwwroot/lib/
+*.mdf
+*.ldf
+*.ndf
+
+## User-specific & local secrets
+appsettings.*.local.json
+secrets.json
+
+## OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <!-- Class library: not directly runnable, so VS won't offer it as a startup project. -->
+    <IsLaunchable>false</IsLaunchable>
+  </PropertyGroup>
+
+  <!-- The kernel uses ASP.NET Core types (HttpContext, IResult, IExceptionHandler,
+       WebApplication, middleware) so it references the shared framework rather than
+       individual packages. -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <!-- EF Core for the persistence base. IHostEnvironment, ILogger, HttpContext, etc.
+       come from the ASP.NET Core framework reference above. -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.0" />
+  </ItemGroup>
+
+  <!-- OpenAPI document (built-in) + Swagger UI for the interactive endpoint explorer.
+       Every module's endpoints are picked up automatically. -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.6" />
+  </ItemGroup>
+
+</Project>

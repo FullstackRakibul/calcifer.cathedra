@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- Class library: not directly runnable, so VS won't offer it as a startup project. -->
+    <IsLaunchable>false</IsLaunchable>
+  </PropertyGroup>
+
+  <!-- The module maps endpoints and registers services, so it uses ASP.NET Core types directly. -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Calcifer.Cathedra\Calcifer.Cathedra.csproj" />
+  </ItemGroup>
+
+</Project>
