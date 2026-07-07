@@ -12,6 +12,7 @@ public sealed class CathedraOptions
     internal List<Assembly> ModuleAssemblies { get; } = new();
     internal List<IModule> ExplicitModules { get; } = new();
 
+
     /// <summary>Scan this assembly for <see cref="IModule"/> implementations.</summary>
     public CathedraOptions AddModuleAssembly(Assembly assembly)
     {
@@ -20,9 +21,12 @@ public sealed class CathedraOptions
         return this;
     }
 
+
     /// <summary>Scan the assembly that contains <typeparamref name="TMarker"/>.</summary>
     public CathedraOptions AddModuleAssemblyContaining<TMarker>() =>
         AddModuleAssembly(typeof(TMarker).Assembly);
+
+
 
     /// <summary>Register a module instance directly, bypassing assembly scanning.</summary>
     public CathedraOptions AddModule(IModule module)
@@ -30,6 +34,7 @@ public sealed class CathedraOptions
         ExplicitModules.Add(module);
         return this;
     }
+
 
     /// <summary>Register a module by type; it is created with its public parameterless constructor.</summary>
     public CathedraOptions AddModule<TModule>() where TModule : IModule, new() =>

@@ -3,5 +3,6 @@
     <Project Path="src/Calcifer.Sample.Api/Calcifer.Sample.Api.csproj" />
     <Project Path="src/Calcifer.Cathedra/Calcifer.Cathedra.csproj" />
     <Project Path="src/Calcifer.Public/Calcifer.Public.csproj" />
+    <Project Path="src/Calcifer.SweetPDF/Calcifer.SweetPDF.csproj" />
   </Folder>
 </Solution>

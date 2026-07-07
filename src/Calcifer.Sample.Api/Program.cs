@@ -3,6 +3,7 @@ using Calcifer.Cathedra.Modules;
 using Calcifer.Cathedra.Persistence;
 using Calcifer.Public;
 using Calcifer.Sample.Api;
+using Calcifer.SweetPDF;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,8 @@ builder.Services.AddDbContext<CathedraDbContext>(options =>
 
 // --- The core + all discovered modules -----------------------------------------------------
 builder.AddCathedra(options =>
-    options.AddModuleAssemblyContaining<PublicModule>());
+    options.AddModuleAssemblyContaining<PublicModule>()
+           .AddModuleAssemblyContaining<SweetPdfModule>());
 
 // File-based logging: ILogWriter now writes to BOTH the console and a daily-rotated file under
 // logs/cathedra/. Settings are read from the "Cathedra:FileLogging" section of appsettings.json.
