@@ -9,7 +9,7 @@ namespace Calcifer.Sample.Api;
 /// </summary>
 public sealed class AnonymousCurrentUser : ICurrentUser
 {
-    public string? UserId => null;
-    public string? UserName => "system";
-    public bool IsAuthenticated => false;
+    public string? UserId => "rh.rabbi73";
+    public string? UserName => "TERMINALUSER";
+    public bool IsAuthenticated => true;
 }

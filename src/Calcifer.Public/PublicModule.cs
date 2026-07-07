@@ -22,10 +22,12 @@ public sealed class PublicModule : IModule
         services.AddScoped<IPublicService, PublicService>();
     }
 
+
     public void MapEndpoints(WebApplication app)
     {
         app.MapPublicEndpoints();
     }
+
 
     public Task InitializeAsync(IServiceProvider services, CancellationToken ct = default)
     {
@@ -33,4 +35,6 @@ public sealed class PublicModule : IModule
         logger.LogInformation("Public module initialized");
         return Task.CompletedTask;
     }
+
+
 }
